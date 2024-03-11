@@ -152,6 +152,19 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# ignore Mac Files
+.DS_Store
+*.DS_Store
+# ignore ALL Video files
+*.mp4
+*.avi
+*.MOV
+*.mp3
+#python cache
+__pycache__/
+logs/
+
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
