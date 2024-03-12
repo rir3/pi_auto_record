@@ -1,7 +1,7 @@
 from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
 
 # Load the video clip
-video_clip = VideoFileClip("video.mp4")
+video_clip = VideoFileClip("test.mp4")
 
 # Load the logo image (adjust dimensions as needed)
 logo = ImageClip("logo.png").resize(height=500)
