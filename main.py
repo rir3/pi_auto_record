@@ -41,6 +41,7 @@ def main():
         dir+output_video
     ]
     process = subprocess.run(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
 
     if process.returncode == 0:
         logging.info("FFmpeg command executed successfully")
