@@ -40,7 +40,7 @@ def main():
         '-c:a', 'copy',
         dir+output_video
     ]
-    process = subprocess.run(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process = subprocess.Popen(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     process.wait()
 
     if process.returncode == 0:
