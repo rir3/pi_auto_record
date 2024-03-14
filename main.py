@@ -9,7 +9,7 @@ import logging
 #This can be activated with a relay.
 
 #Resources
-dir = 'shared/'
+dir = 'IllusionistVideos/'
 video = 'video.mp4'
 image = 'logo.png'
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -36,7 +36,7 @@ ffmpeg_command = [
     '-i', image,
     '-filter_complex', '[1:v]scale=250:-1[logo];[0:v][logo]overlay=W-w-10:H-h-10',
     '-c:a', 'copy',
-    output_video
+    dir+output_video
 ]
 process = subprocess.run(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
