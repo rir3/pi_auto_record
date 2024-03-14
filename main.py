@@ -28,6 +28,7 @@ def main():
     logging.info("Recording Started.")
     picam2 = Picamera2()
     picam2.start_and_record_video(video, duration=recording_duration)
+    picam2.stop()
 
     #Logo Embeding
     logging.info("Logo Embeding Started.")
