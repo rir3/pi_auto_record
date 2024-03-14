@@ -13,4 +13,6 @@ logo = logo.set_duration(video_clip.duration)
 final_clip = CompositeVideoClip([video_clip, logo.set_position(("right", "bottom"))])
 
 # Write the final clip to a new file
-final_clip.write_videofile("logo_video.mp4", codec="libx264", fps=video_clip.fps)
+final_clip.write_videofile("logovideo.mp4", codec="libx264", fps=video_clip.fps)
+
+final_clip.write_videofile("dog.ogv")
