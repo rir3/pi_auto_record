@@ -48,3 +48,5 @@ def main():
     else:
         logging.info(f"FFmpeg command failed with error: {process.stderr.decode('utf-8')}")
 
+if __name__ == "__main__":
+    main()
