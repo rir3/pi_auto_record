@@ -11,7 +11,8 @@ from datetime import datetime
 dir = 'shared/'
 video = 'video.mp4'
 image = 'logo.png'
-output_video = f"output_video_{datetime.now().strftime("%Y%m%d_%H%M%S")}.mp4"
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+output_video = f"output_video_{timestamp}.mp4"
 recording_duration = 10
 
 #Trigger
