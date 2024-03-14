@@ -1,6 +1,7 @@
 from gpiozero import Button
 from picamera2 import Picamera2
 import subprocess
+from datetime import datetime
 
 #Relay Activated Auto Recording
 #This program will start recording when Pin 11 GPIO 17 is grounded.
@@ -10,13 +11,13 @@ import subprocess
 dir = 'shared/'
 video = 'video.mp4'
 image = 'logo.png'
-output_video = 'output_video.mp4'
+output_video = f"output_video_{datetime.now().strftime("%Y%m%d_%H%M%S")}.mp4"
 recording_duration = 10
 
 #Trigger
 button = Button(17)
 print("Waiting for button press.")
-button.wait_for_press()
+#button.wait_for_press()
 print("The button was pressed!")
 
 
@@ -25,6 +26,8 @@ picam2 = Picamera2()
 picam2.start_and_record_video(video, duration=recording_duration)
 
 #Logo Embeding
+
+
 ffmpeg_command = [
     'ffmpeg',
     '-i', video,
