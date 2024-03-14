@@ -2,6 +2,7 @@ from gpiozero import Button
 from picamera2 import Picamera2
 import subprocess
 from datetime import datetime
+import logging
 
 #Relay Activated Auto Recording
 #This program will start recording when Pin 11 GPIO 17 is grounded.
@@ -17,18 +18,18 @@ recording_duration = 10
 
 #Trigger
 button = Button(17)
-print("Waiting for button press.")
+logging.info("Waiting for button press.")
 #button.wait_for_press()
-print("The button was pressed!")
+logging.info("The button was pressed!")
 
 
 #Record
+logging.info("Recording Started.")
 picam2 = Picamera2()
 picam2.start_and_record_video(video, duration=recording_duration)
 
 #Logo Embeding
-
-
+logging.info("Logo Embeding Started.")
 ffmpeg_command = [
     'ffmpeg',
     '-i', video,
@@ -40,7 +41,7 @@ ffmpeg_command = [
 process = subprocess.run(ffmpeg_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 if process.returncode == 0:
-    print("FFmpeg command executed successfully")
+    logging.info("FFmpeg command executed successfully")
 else:
-    print(f"FFmpeg command failed with error: {process.stderr.decode('utf-8')}")
+    logging.info(f"FFmpeg command failed with error: {process.stderr.decode('utf-8')}")
 
