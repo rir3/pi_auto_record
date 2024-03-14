@@ -14,7 +14,7 @@ output_video = 'output_video.mp4'
 recording_duration = 10
 
 #Trigger
-button = Button(2)
+button = Button(17)
 print("Waiting for button press.")
 button.wait_for_press()
 print("The button was pressed!")
