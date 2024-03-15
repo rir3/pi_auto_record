@@ -44,10 +44,10 @@ script_name = os.path.basename(__file__)
 logger = logging.getLogger("main")
 
 # How long to sleep, in seconds, when running in DEBUG mode
-DEBUG_SLEEP_TIME = 60
+DEBUG_SLEEP_TIME = 2
 
 # How long to sleep, in seconds, when running in non-DEBUG mode
-PRODUCTION_SLEEP_TIME = 60
+PRODUCTION_SLEEP_TIME = 5
 
 # List of email addresses to send emails to when something crashes
 ADMIN_EMAILS = ["user@gmail.com"]
