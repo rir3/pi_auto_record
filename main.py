@@ -46,7 +46,7 @@ def main():
     if process.returncode == 0:
         logging.info("FFmpeg command executed successfully")
     else:
-        logging.info(f"FFmpeg command failed with error: {process.stderr.read().decode('utf-8')}")
+        print(f"FFmpeg command failed with error: {process.stderr.read().decode('utf-8')}")
 
 if __name__ == "__main__":
     main()
