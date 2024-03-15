@@ -44,9 +44,10 @@ def main():
     process.wait()
 
     if process.returncode == 0:
-        logging.info("FFmpeg command executed successfully")
+        print("FFmpeg command executed successfully")
     else:
-        print(f"FFmpeg command failed with error: {process.stderr.read().decode('utf-8')}")
+        #print(f"FFmpeg command failed with error: {process.stderr.read().decode('utf-8')}")
+        raise Exception(f"FFmpeg command failed with error: {process.stderr.read().decode('utf-8')}")
 
 if __name__ == "__main__":
     main()
