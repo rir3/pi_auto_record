@@ -12,11 +12,13 @@ import logging
 dir = 'IllusionistVideos/'
 video = 'video.mp4'
 image = 'logo.png'
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-output_video = f"output_video_{timestamp}.mp4"
 recording_duration = 10
 
 def main():
+    #Resources
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_video = f"output_video_{timestamp}.mp4"
+
     #Trigger
     button = Button(17)
     logging.info("Waiting for button press.")
