@@ -16,7 +16,7 @@ Description=Auto Record
 [Service]
 
 # User to run the service as
-#User=tal
+User=pi
 
 # Group to run the service as
 #Group=tal
