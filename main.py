@@ -9,9 +9,9 @@ import logging
 #This can be activated with a relay.
 
 #Resources
-dir = 'IllusionistVideos/'
-video = 'video.mp4'
-image = 'logo.png'
+dir = '/home/pi/Projects/pi_auto_record/IllusionistVideos/'
+video = '/home/pi/Projects/pi_auto_record/video.mp4'
+image = '/home/pi/Projects/pi_auto_record/logo.png'
 recording_duration = 10
 
 def main():
