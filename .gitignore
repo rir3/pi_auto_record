@@ -164,6 +164,8 @@ cython_debug/
 __pycache__/
 logs/
 env
+main.bin
+main.dist
 
 
 # PyCharm
