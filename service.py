@@ -50,7 +50,7 @@ DEBUG_SLEEP_TIME = 60
 PRODUCTION_SLEEP_TIME = 60*5
 
 # List of email addresses to send emails to when something crashes
-ADMIN_EMAILS = ["user@gmail.com"]
+ADMIN_EMAILS = ["rafy.reyes.007@gmail.com"]
 
 ################
 # Setup Logger #
