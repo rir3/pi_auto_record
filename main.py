@@ -22,7 +22,7 @@ def main():
     #Trigger
     button = Button(17)
     logging.info("Waiting for button press.")
-    #button.wait_for_press()
+    button.wait_for_press()
     logging.info("The button was pressed!")
 
 
