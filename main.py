@@ -38,7 +38,7 @@ def main():
         'ffmpeg',
         '-i', video,
         '-i', image,
-        '-filter_complex', '[1:v]scale=250:-1[logo];[0:v][logo]overlay=W-w-10:H-h-10',
+        '-filter_complex', '[1:v]scale=250:-1,vflip[logo];[0:v][logo]overlay=W-w-10:H-h-10',
         '-c:a', 'copy',
         dir+output_video
     ]
